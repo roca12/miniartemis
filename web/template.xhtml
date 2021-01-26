@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title><ui:insert name="title">Default Title</ui:insert></title>
+        <h:outputStylesheet library="css" name="jsfcrud.css"/>
+        <h:outputScript library="js" name="jsfcrud.js"/>
+        <h:outputStylesheet name="primeicons/primeicons.css" library="primefaces" />
+        
+    </h:head>
+
+    <h:body>
+
+        <p:growl id="growl" life="3000" />
+        <p:layout fullPage="true">
+            <p:layoutUnit position="north" size="50" collapsible="false" header="ARTEMIS POCKET - Administracion de tablas">
+
+
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="60">
+                <ui:insert name="footer"/>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <h:form id="menuForm">
+                    <p:menubar style="height:40px">
+                        <p:menuitem value="#{bundle.Home}" outcome="/index" icon="pi pi-home"/>
+                        <p:menuitem value="Volver" outcome="/admin" icon="pi pi-chevron-left"/>
+
+                        <p:submenu label="Tablas" icon="pi pi-table" expanded="false" >
+                            <p:menuitem value="AuditoriaAcceso" outcome="/admin/auditoriaAcceso/List.xhtml" />
+                            <p:menuitem value="CertEstadisticas" outcome="/admin/certEstadisticas/List.xhtml" />
+                            <p:menuitem value="CertInscripcion" outcome="/admin/certInscripcion/List.xhtml" />
+                            <p:menuitem value="Comentarios" outcome="/admin/comentarios/List.xhtml" />
+                            <p:menuitem value="Ejercicios" outcome="/admin/ejercicios/List.xhtml" />
+                            <p:menuitem value="Enviosuva" outcome="/admin/enviosuva/List.xhtml" />
+                            <p:menuitem value="Feed" outcome="/admin/feed/List.xhtml" />
+                            <p:menuitem value="Juecesonline" outcome="/admin/juecesonline/List.xhtml" />
+                            <p:menuitem value="Lenguajes" outcome="/admin/lenguajes/List.xhtml" />
+                            <p:menuitem value="Rangos" outcome="/admin/rangos/List.xhtml" />
+                            <p:menuitem value="Temario" outcome="/admin/temario/List.xhtml" />
+                            <p:menuitem value="Universidades" outcome="/admin/universidades/List.xhtml" />
+                            <p:menuitem value="Usuarios" outcome="/admin/usuarios/List.xhtml" />
+
+                        </p:submenu>
+                    </p:menubar>
+                </h:form>
+                <ui:insert name="body"/>
+            </p:layoutUnit>
+
+        </p:layout>
+
+    </h:body>
+
+</html>
