@@ -4635,8 +4635,7 @@ b, strong {
   border: 1px solid #ccc;
   border-top: none;
 }
-@charset "UTF-8";
-@import url("/showcase/javax.faces.resource/primeicons/primeicons.css.xhtml?ln=primefaces&v=8.0.2-SNAPSHOT");
+
 
 :root {
     --input-border-color: #a6a6a6;
